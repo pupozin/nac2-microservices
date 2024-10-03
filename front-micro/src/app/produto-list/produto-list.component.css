@@ -1,0 +1,79 @@
+/* Estilo geral para a lista de produtos */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 200px;
+}
+
+ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding padrão */
+  max-width: 600px; /* Limita a largura da lista */
+  margin: 20px auto; /* Centraliza a lista na página */
+  border: 1px solid #ddd; /* Adiciona uma borda ao redor da lista */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #f9f9f9; /* Fundo claro para a lista */
+}
+
+li {
+  padding: 15px; /* Espaçamento interno para cada item */
+  border-bottom: 1px solid #ddd; /* Borda entre os itens */
+  display: flex; /* Flexbox para alinhamento dos botões */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+li:last-child {
+  border-bottom: none; /* Remove a borda do último item */
+}
+
+span {
+  margin-right: 10px; /* Espaço entre os elementos de texto */
+  font-weight: 500; /* Levemente mais forte para destacar */
+}
+
+button {
+  padding: 10px 15px; /* Espaçamento interno dos botões */
+  margin-left: 10px; /* Espaço entre os botões */
+  border: none; /* Remove borda padrão dos botões */
+  border-radius: 5px; /* Bordas arredondadas */
+  background-color: #28a745; /* Cor de fundo verde */
+  color: white; /* Texto branco */
+  cursor: pointer; /* Cursor como ponteiro ao passar sobre os botões */
+  transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: #218838; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+h3 {
+  margin-top: 20px; /* Espaço acima dos títulos de edição e adição */
+  color: #555; /* Cor do texto dos títulos */
+  text-align: center;
+}
+
+/* Estilo para os formulários */
+form {
+  display: flex; /* Flexbox para o layout dos formulários */
+  flex-direction: column; /* Coluna para os inputs */
+  max-width: 600px; /* Limita a largura do formulário */
+  margin: 20px auto; /* Centraliza o formulário na página */
+  border: 1px solid #ddd; /* Borda ao redor do formulário */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 15px; /* Espaçamento interno do formulário */
+  background-color: #f9f9f9; /* Fundo claro para o formulário */
+}
+
+input {
+  padding: 10px; /* Espaçamento interno dos inputs */
+  margin: 10px 0; /* Margem acima e abaixo dos inputs */
+  border: 1px solid #ccc; /* Borda dos inputs */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+input:focus {
+  border-color: #28a745; /* Cor da borda ao focar no input */
+  outline: none; /* Remove o contorno padrão */
+}

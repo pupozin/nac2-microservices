@@ -1,0 +1,28 @@
+<h2>Lista de Produtos</h2>
+
+<ul>
+  <li *ngFor="let produto of produtos">
+    <span>{{ produto.nome }}</span>
+    <span> - Preço: {{ produto.preco | currency:'BRL' }}</span>
+    <span> - Quantidade em Estoque: {{ produto.quantidadeEstoque }}</span>
+    <button (click)="deleteProduto(produto.id)" *ngIf="produto.id !== undefined">Excluir</button>
+    <button (click)="editarProduto(produto)">Editar</button>
+  </li>
+</ul>
+
+<h3 *ngIf="produtoEditando">Editar Produto</h3>
+<form *ngIf="produtoEditando" (ngSubmit)="saveEdit()">
+  <input [(ngModel)]="produtoEditando.nome" name="nome" placeholder="Nome" required>
+  <input [(ngModel)]="produtoEditando.preco" name="preco" type="number" placeholder="Preço" required>
+  <input [(ngModel)]="produtoEditando.quantidadeEstoque" name="quantidadeEstoque" type="number" placeholder="Quantidade em Estoque" required>
+  <button type="submit">Salvar</button>
+  <button type="button" (click)="produtoEditando = null">Cancelar</button>
+</form>
+
+<h3>Adicionar Novo Produto</h3>
+<form (ngSubmit)="addProduto()">
+  <input [(ngModel)]="novoProduto.nome" name="nome" placeholder="Nome" required>
+  <input [(ngModel)]="novoProduto.preco" name="preco" type="number" placeholder="Preço" required>
+  <input [(ngModel)]="novoProduto.quantidadeEstoque" name="quantidadeEstoque" type="number" placeholder="Quantidade em Estoque" required>
+  <button type="submit">Adicionar</button>
+</form>
